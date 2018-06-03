@@ -12,6 +12,7 @@ You need:
 - QRadar IP address
 - [TheHive4py](https://thehive-project.org/#section_thehive4py)
 - TheHive instance URL
+- Create custom fields on TheHive with the same internal reference and the same type as the script
 
 Use cron to automate the execution of the script.
 
