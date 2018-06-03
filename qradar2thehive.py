@@ -15,14 +15,14 @@ import time
 from thehive4py.api import TheHiveApi
 from thehive4py.models import Case, CustomFieldHelper, CaseTask, CaseObservable
 
-#To use this script correctly please configure following lines
+#To use this script correctly please configure the following lines
 file_id = "</path/to/id_file.txt>"
 api = TheHiveApi('<URL_THE_HIVE>', '<THE_HIVE_API_KEY>')
 warnings.filterwarnings('ignore')
 url = 'https://<QRadar_IP_address>/api/siem/offenses?fields=id%2Cstatus%2Cdescription%2Coffense_type%2Coffense_source%2Cmagnitude%2Csource_network%2Cdestination_networks%2Cassigned_to%2Cstart_time%2Cevent_count'
 headers = {'accept': 'application/json', 'SEC': '<QRADAR_API_KEY>', 'Version': '9.0'}
 
-#If your using a selfsigned certificate on your QRadar instance you have to use "verify=false" parameter:
+#If you're using a selfsigned certificate on your QRadar instance you have to use "verify=false" parameter:
 response_1 = requests.get(url,headers=headers,verify=False)
 
 tasks = [
