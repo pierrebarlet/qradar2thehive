@@ -1,6 +1,3 @@
-# Security-Tools
-Tools for security teams.
-
 # qradar2thehive
 qradar2thehive python script was created to use TheHive as an incident response platform for the IBM QRadar SIEM.
 I made it as simple as possible so that everyone could adapt it to their needs.
