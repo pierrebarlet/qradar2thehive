@@ -6,11 +6,11 @@ Any improvement is welcome.
 Many thanks to The Hive project team for their outstanding work: https://github.com/TheHive-Project
 ## Configuration
 You need:
+- [TheHive4py](https://thehive-project.org/#section_thehive4py)
 - TheHive API key
 - QRadar API key
 - TheHive instance URL
 - QRadar IP address
-- [TheHive4py](https://thehive-project.org/#section_thehive4py)
 - A local file to save last QRadar Offense ID
 - Create custom fields on TheHive with the same internal reference and the same type as the script
 
