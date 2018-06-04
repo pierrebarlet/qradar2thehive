@@ -85,7 +85,7 @@ if (response_1.status_code) == 200:
                 print('ko: {}/{}'.format(response_2.status_code, response_2.text))
                 sys.exit(0)
             
-            #Observables can be use with Cortex's analyzers
+            #Observables can be use with Cortex analyzers
             source_ip_observable = CaseObservable(dataType='ip',
                                     data=[str(data[i]['offense_source'])],
                                     tlp=3,
