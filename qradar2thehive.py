@@ -10,7 +10,6 @@ import json
 import time
 import uuid
 import sys
-import hashlib
 import time
 from thehive4py.api import TheHiveApi
 from thehive4py.models import Case, CustomFieldHelper, CaseTask, CaseObservable
