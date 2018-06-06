@@ -24,9 +24,10 @@ headers = {'accept': 'application/json', 'SEC': '<QRADAR_API_KEY>', 'Version': '
 #If you're using a selfsigned certificate on your QRadar instance you have to use "verify=false" parameter:
 response_1 = requests.get(url,headers=headers,verify=False)
 
+#If you're using JIRA as ticketing platform in the task 'Communication' you can add the URL of your JIRA, else delete the description parameter.
 tasks = [
     CaseTask(title='Tracking'),
-    CaseTask(title='Communication'),
+    CaseTask(title='Communication', description= '**[Ticket creation](https://PATH/TO/JIRA/CreateIssue!default.jspa)**'),
     CaseTask(title='Investigation', status='Waiting', flag=True)
 ]
 
