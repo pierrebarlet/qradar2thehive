@@ -39,7 +39,6 @@ if (response_1.status_code) == 200:
         data_file = f.readlines()
         if data_file == []:
             last_line = int(last_id)-1
-            print(last_line)
             fichier = open(file_id, "w")
             fichier.write(last_id)
             fichier.close()
