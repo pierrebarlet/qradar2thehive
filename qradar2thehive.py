@@ -37,7 +37,15 @@ if (response_1.status_code) == 200:
     
     with open(file_id) as f:
         data_file = f.readlines()
-        last_line = data_file[-1]
+        if data_file == []:
+            last_line = int(last_id)-1
+            print(last_line)
+            fichier = open(file_id, "w")
+            fichier.write(last_id)
+            fichier.close()
+            print("File was empty. To avoid errors, the file has been updated with the ID of the penultimate QRadar offense: "+ str(last_line))
+        else:
+            last_line = data_file[-1]
    
     if int(last_line) < int(last_id):
         first_new_offense = int(last_line)
