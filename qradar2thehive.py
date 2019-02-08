@@ -46,7 +46,8 @@ if (response_1.status_code) == 200:
         file.close()
         diff = int(last_id) - first_new_offense
         
-        for i in range(0,diff):
+        for j in range(0,diff):
+            i=diff-j
             offenseId = int(data[i]['id'])
             offenseDescription = str(data[i]['description'])
             offenseSource = str(data[i]['offense_source'])
