@@ -26,7 +26,6 @@ def search(title, query, range, sort):
        print(var)
        # attributes to update
        updated_case = api.case.update(var,
-                               status='Resolved'
                                status='Resolved',
                                resolutionStatus='TruePositive',
                                impactStatus='NoImpact',
