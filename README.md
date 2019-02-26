@@ -15,6 +15,10 @@ You need:
 - Create custom fields on TheHive with the same internal reference and the same type as the script
 
 Use cron to automate the execution of the script.
+Sample:
+```
+*/1 * * * * /usr/bin/python3 /path/to/qradar2thehive.py
+```
 
 # multi_cases_updator
 A little script to update a large number of cases.
