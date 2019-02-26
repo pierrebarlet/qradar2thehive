@@ -16,3 +16,8 @@ You need:
 
 Use cron to automate the execution of the script.
 
+# multi_cases_updator
+A little script to update a large number of cases.
+You have to configure the range of cases id you want to update and of course the attributes you want to modifiy.
+I use the script to close a large number of cases when i have false positive from QRadar.
+If you want to update a little numbre of cases you can get a sample script from TheHive-Project [here](https://github.com/TheHive-Project/TheHive4py/tree/master/samples).
