@@ -25,3 +25,6 @@ A little script to update a large number of cases.
 You have to configure the range of cases id you want to update and of course the attributes you want to modifiy.
 I use the script to close a large number of cases when i have false positive from QRadar.
 If you want to update a small number of cases you can get samples from TheHive-Project [here](https://github.com/TheHive-Project/TheHive4py/tree/master/samples).
+
+# Other solutions:
+Also available for those who prefer alert creation instead of case creation: [qradar-2-thehive-alert](https://github.com/duomotomo/qradar-2-thehive-alert/tree/master) from https://github.com/duomotomo
