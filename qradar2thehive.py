@@ -21,8 +21,7 @@ warnings.filterwarnings('ignore')
 url = 'https://<QRadar_IP_address>/api/siem/offenses?fields=id%2Cstatus%2Cdescription%2Coffense_type%2Coffense_source%2Cmagnitude%2Csource_network%2Cdestination_networks%2Cassigned_to%2Cstart_time%2Cevent_count'
 headers = {'accept': 'application/json', 'SEC': '<QRADAR_API_KEY>', 'Version': '9.0'}
 
-#If you're using a selfsigned certificate on your QRadar instance you have to use "verify=false" parameter:
-response_1 = requests.get(url,headers=headers,verify=False)
+
 
 #If you're using JIRA as ticketing platform in the task 'Communication' you can add the URL of your JIRA, else delete the description parameter.
 tasks = [
@@ -31,6 +30,9 @@ tasks = [
     CaseTask(title='Investigation', status='Waiting', flag=True)
 ]
 
+def OffensesRequest():
+#If you're using a selfsigned certificate on your QRadar instance you have to use "verify=false" parameter:
+response_1 = requests.get(url,headers=headers,verify=False)
 if (response_1.status_code) == 200:
     data = response_1.json()
     last_id = (str((data[0]['id'])))
@@ -117,3 +119,5 @@ if (response_1.status_code) == 200:
 
 else:
     print("Can't get offenses, check the configuration.")
+
+OffensesRequest()
